@@ -14,7 +14,7 @@
         <div class="box-body">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <a href="{{route('admin.rooms.create')}}"  rel="noopener noreferrer">
                         <button class="btn btn-primary btn-xs">
                             <i class="fa fa-plus"></i> Tambah
                         </button>
@@ -25,9 +25,9 @@
                             <tr>
                                 <th>Gambar</th>
                                 <th>Room Category</th>
+                                <th>Category</th>
                                 <th>bed_type</th>
                                 <th>Harga</th>
-                                <th>Max.People</th>
                                 <th>Facility</th>
                                 <th>Size</th>
                             </tr>

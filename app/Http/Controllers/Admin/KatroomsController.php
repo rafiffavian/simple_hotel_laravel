@@ -10,7 +10,7 @@ use App\Kategori_room;
 class KatroomsController extends Controller
 {
     public function index()
-    {
+    {   
         $katroom = Kategori_room::all();
         return view('admin.admin-katroom-table',compact('katroom'));
     }
@@ -36,5 +36,20 @@ class KatroomsController extends Controller
 
             'mykatroom' => $katrooms
         ]);
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nama_kategori' => 'required'
+        ]);
+        $katroomm = Kategori_room::findOrFail($id);
+        $katroomm->fill($request->except(['token','_method']))->save();
+        return redirect(route('admin.katrooms'));
+    }
+    public function delete($id)
+    {
+        $apus = Kategori_room::findOrFail($id);
+        $apus->delete();
+        return redirect(route('admin.katrooms'));
     }
 }

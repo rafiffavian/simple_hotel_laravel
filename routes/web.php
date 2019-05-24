@@ -28,6 +28,15 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/admin/katrooms/create', 'Admin\KatroomsController@create')->name('admin.katrooms.create');
     Route::post('/admin/katrooms/store', 'Admin\KatroomsController@store')->name('admin.katrooms.store');
     Route::get('/admin/katrooms/{id}/edit', 'Admin\KatroomsController@edit')->name('admin.katrooms.edit');
+    Route::put('/admin/katrooms/{id}/update', 'Admin\KatroomsController@update')->name('admin.katrooms.update');
+    Route::get('/admin/katrooms/{id}/delete', 'Admin\KatroomsController@delete')->name('admin.katrooms.delete');
 
     Route::get('/admin/bedtype', 'Admin\BedController@index')->name('admin.bedtype');
+    Route::get('/admin/bedtype/create', 'Admin\BedController@create')->name('admin.bedtype.create');
+    Route::post('/admin/bedtype', 'Admin\BedController@store')->name('admin.bedtype.store');
+    Route::get('/admin/bedtype/{id}/edit', 'Admin\BedController@edit')->name('admin.bedtype.edit');
+
+    Route::get('/admin/category', 'Admin\CategoryyController@index')->name('admin.category');
+    Route::get('/admin/category/create', 'Admin\CategoryyController@create')->name('admin.category.create');
+    Route::get('/admin/category/store', 'Admin\CategoryyController@store')->name('admin.category.store');
 });
