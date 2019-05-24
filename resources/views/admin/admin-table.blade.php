@@ -25,8 +25,8 @@
                             <tr>
                                 <th>Gambar</th>
                                 <th>Room Category</th>
-                                <th>Category</th>
                                 <th>bed_type</th>
+                                <th>Max.People</th>
                                 <th>Harga</th>
                                 <th>Facility</th>
                                 <th>Size</th>

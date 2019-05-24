@@ -36,4 +36,22 @@ class BedController extends Controller
                 'mybedtype' => $bedtypes
         ]);
     }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+
+            'nama_bed' => 'required'
+
+        ]);
+        $beds = Bed_type::findOrFail($id);
+        $beds->fill($request->except(['token','_method']))->save();
+        return redirect(route('admin.bedtype'));
+    }
+
+    public function delete($id)
+    {
+        $beddtype = Bed_type::findOrFail($id);
+        $beddtype->delete();
+        return redirect(route('admin.bedtype'));
+    }
 }

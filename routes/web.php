@@ -35,8 +35,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/admin/bedtype/create', 'Admin\BedController@create')->name('admin.bedtype.create');
     Route::post('/admin/bedtype', 'Admin\BedController@store')->name('admin.bedtype.store');
     Route::get('/admin/bedtype/{id}/edit', 'Admin\BedController@edit')->name('admin.bedtype.edit');
+    Route::put('/admin/bedtype/{id}/update', 'Admin\BedController@update')->name('admin.bedtype.update');
+    Route::get('/admin/bedtype/{id}/delete', 'Admin\BedController@delete')->name('admin.bedtype.delete');
 
-    Route::get('/admin/category', 'Admin\CategoryyController@index')->name('admin.category');
-    Route::get('/admin/category/create', 'Admin\CategoryyController@create')->name('admin.category.create');
-    Route::get('/admin/category/store', 'Admin\CategoryyController@store')->name('admin.category.store');
+    
 });

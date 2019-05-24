@@ -40,6 +40,8 @@
                                 <option value="{{$item->id}}">{{$item->nama_bed}}</option>
                             @endforeach    
                             </select><br>
+                            <label for="textinput">Max.People</label>  
+                            <input id="textinput" name="nama_kategori" value="{{old('nama_kategori')}}" type="text" placeholder="Harga" class="form-control input-md" required="">
                             <label for="textinput">Harga</label>  
                             <input id="textinput" name="nama_kategori" value="{{old('nama_kategori')}}" type="text" placeholder="Harga" class="form-control input-md" required="">
                             <label for="textinput">Fasilitas</label>  

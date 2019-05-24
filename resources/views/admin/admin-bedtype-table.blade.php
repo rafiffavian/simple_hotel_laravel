@@ -37,10 +37,10 @@
                                 <td>{{$v->updated_at}}</td>
                                 <td>
                                     <div class="btn btn-group">
-                                        <a href="{{route('admin.bedtype.edit',$v->id)}}" class="btn btn-warning btn-xs">
+                                        <a href="{{route('admin.bedtype.edit',$v->id)}}" onclick="return confirm('Apakah Anda Yakin Akan Mengedit Data Ini?')" class="btn btn-warning btn-xs">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="" class="btn btn-danger btn-xs">
+                                        <a href="{{route('admin.bedtype.delete',$v->id)}}" onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')" class="btn btn-danger btn-xs">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </div>
